@@ -1,0 +1,277 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--container-color);
+}
+
+.nav {
+    height: calc(var(--header-height) + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.icon__container {
+    display: flex;
+    gap: 1rem;
+}
+
+.cart__icon,
+.search__icon {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    font-size: 1.25rem;
+}
+
+.cart__icon {
+    position: relative;
+    display: inline-block;
+}
+
+.num-orders {
+    position: absolute;
+    top: -0.2rem;
+    /* Adjust the distance from the top of the cart icon */
+    right: -0.5rem;
+    /* Adjust the distance from the right of the cart icon */
+    background-color: var(--special-color);
+    /* Choose your desired background color */
+    color: var(--container-color);
+    /* Choose your desired text color */
+    font-size: 0.5rem;
+    border-radius: 50%;
+    /* Make it a circle */
+    width: 1rem;
+    /* Set width and height to create a circle */
+    height: 1rem;
+    /* Set width and height to create a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.nav__close,
+.nav__toggle {
+    display: None;
+}
+
+/* Active link */
+.active-link,
+.nav__link:hover {
+    color: var(--theme-color);
+}
+
+.parent-item {
+    display: flex;
+}
+
+.sub-menu-desktop__category {
+    text-align: left;
+    position: absolute;
+    top: var(--header-height);
+    z-index: 1000;
+    background-color: var(--container-color);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 10rem;
+    padding-bottom: 2rem;
+    transition: .3s;
+}
+
+/* 
+.sub-menu__category {
+    display: none;
+} */
+
+.sub-menu__item {
+    margin-bottom: 0.5rem;
+}
+
+.sub-menu__link {
+    align-items: left !important;
+}
+
+.right-arrow-icon,
+.left-arrow-icon {
+    display: none;
+}
+
+/* ------------------------------- BREAKPOINTS ------------------------------ */
+/* For medium devices */
+@media screen and (max-width: 992px) {
+    .nav {
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .nav__overlay {
+        top: calc(var(--header-height) + 1rem);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(49, 49, 49, 0.5);
+        z-index: 1000;
+    }
+
+    .nav__toggle {
+        margin-right: 0.5rem;
+        /* Adds some space between the .nav__toggle and .cart icon */
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: calc(var(--header-height) + 1rem);
+        right: -100%;
+        width: 100%;
+        background-color: var(--container-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        transition: .3s;
+        z-index: 1000;
+    }
+
+    /* Show menu */
+    .show-menu {
+        top: calc(var(--header-height) + 1rem);
+        right: 0;
+        /* Transition the menu to the left */
+    }
+
+    .nav__list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Push the items in the list to the right */
+    .current-parent,
+    .sub-menu__item,
+    .nav__item {
+        margin-left: auto;
+        /* Pushes the item to the right */
+        margin-right: 8rem;
+    }
+
+    .nav__close {
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: var(--title-color);
+    }
+
+    /* .nav__close:hover {
+        color: var(--theme-color);
+    } */
+
+    .nav__toggle {
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    /* .nav__toggle:hover {
+        color: var(--theme-color);
+    } */
+
+    .nav__close,
+    .nav__toggle {
+        display: block;
+    }
+
+    /* Don't show the down icon, instead using the arrow */
+    .down-icon {
+        display: none;
+    }
+
+    .right-arrow-icon,
+    .left-arrow-icon {
+        display: flex;
+        align-items: center;
+        font-size: var(--h1-font-size);
+    }
+
+    .nav-parent__item {
+        display: flex;
+    }
+
+    .sub-menu__category {
+        display: block;
+        position: absolute;
+        width: 100% !important;
+        background-color: var(--container-color);
+        padding-bottom: 0rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        z-index: 1000;
+        /* padding: 2rem 1.5rem 4rem; */
+        transition: .3s;
+    }
+
+    .sub-menu-desktop__category {
+        display: none;
+    }
+
+    /* Container of right arrow and Category link */
+    .back__container {
+        padding-top: 0.5rem;
+        display: flex;
+    }
+
+    .current-parent,
+    .sub-menu__item {
+        margin-left: auto;
+        margin-bottom: 1rem;
+    }
+
+    .sub-menu__item {
+        text-align: right;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav__list {
+        column-gap: 0;
+    }
+
+    .current-parent,
+    .sub-menu__item,
+    .nav__item {
+        margin-left: auto;
+        /* Pushes the item to the right */
+        margin-right: 1rem;
+    }
+}
+
+
+/* For small devices */
+@media screen and (max-width: 460px) {
+    .nav__list {
+        column-gap: 0;
+    }
+
+    .current-parent,
+    .sub-menu__item,
+    .nav__item {
+        margin-left: auto;
+        /* Pushes the item to the right */
+        margin-right: 0.5rem;
+    }
+}
