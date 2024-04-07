@@ -1,0 +1,88 @@
+/* .footer {
+    bottom: 0 !important;
+    width: 100%;
+    background-color: var(--theme-color-light);
+} */
+
+.footer { 
+    margin-top: auto;
+    /* bottom: 0;  */
+    width: 100%;
+    background-color: var(--theme-color-light);
+}
+
+.footer__container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    grid-template-columns: 1fr 1fr 0.75fr;
+}
+
+.footer__social {
+    width: 50%;
+    align-items: center;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--theme-color);
+    font-size: 1.25rem;
+    font-weight: var(--font-medium);
+}
+
+.contact-title {
+    text-align: left;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.info p {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-normal);
+}
+
+
+/* For small devices */
+@media screen and (max-width: 460px) {
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-title {
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .footer__social {
+        gap: 0.5rem;
+        width: 40%;
+    }
+
+    .social-icons {
+        display: grid;
+        gap: 0.25rem;
+    }
+
+    .social-icons > a {
+        text-align: left; /* Align the icon to the left within its grid cell */
+        display: inline-block; /* Ensure the anchor elements behave like blocks to apply text-align */
+    }    
+}
+
+
+

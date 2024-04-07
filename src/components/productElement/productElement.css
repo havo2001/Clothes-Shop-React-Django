@@ -1,0 +1,22 @@
+.product__name {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+}
+
+.product__price {
+    color: var(--theme-color);
+    font-weight: var(--font-medium);
+}
+
+
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .color-dot {
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50% !important;
+        margin-right: 3px !important;
+    }
+
+}
