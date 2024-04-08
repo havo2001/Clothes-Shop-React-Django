@@ -22,6 +22,14 @@ const Header = () => {
         setShowSubMenuMobile(!showSubMenuMobile);
     };
 
+    // Function to toggle search
+    const toggleSearch = () => {
+        // Check if nav bar is not toggled
+        if (!navToggle) {
+            setIsOpen(!isOpen); // Toggle search
+        }
+    };
+
     return (
         <header className='header'>
             <nav className='nav container'>
@@ -94,7 +102,7 @@ const Header = () => {
                 </div>
 
                 <div className="icon__container">
-                    <Search isOpen={isOpen} toggleSearch={() => setIsOpen(!isOpen)} />
+                    <Search isOpen={isOpen} toggleSearch={toggleSearch} /> {/* Pass the custom toggleSearch function */}
                     {!isOpen && (
                         <Link to='/cart' className="uil uil-shopping-cart-alt cart__icon">
                             <span className='num-orders'>{Order.numOrders}</span>
@@ -114,6 +122,3 @@ const Header = () => {
 }
 
 export default Header;
-
-
-
