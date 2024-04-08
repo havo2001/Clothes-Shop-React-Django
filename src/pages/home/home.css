@@ -1,6 +1,6 @@
 /* For medium devices */
 @media screen and (max-width: 992px) {
     .home__container {
-        top: calc(var(--header-height) + 1rem);
+        padding-top: calc(var(--header-height) + 1rem);
     }
 }

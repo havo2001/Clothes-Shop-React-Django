@@ -1,10 +1,10 @@
-.cart__container {
+.detailed-category__container {
     margin-top: 2rem;
 }
 
 /* For small devices */
 @media screen and (max-width: 460px) {
-    .cart__container {
+    .detailed-category__container {
         padding-top: var(--header-height);
     }
 }

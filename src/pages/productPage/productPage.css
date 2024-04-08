@@ -1,6 +1,80 @@
 .product-page__container {
-    margin-top: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+
 }
+
+/* Images display */
+.product-image__container {
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    gap: 0.5rem;
+    width: 17.5rem;
+}
+
+.small-images {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.product-image {
+    width: 4rem;
+    /* Adjust the width as needed */
+    height: 4rem;
+    /* Adjust the height as needed */
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-image.selected {
+    border: 2px solid var(--theme-color);
+}
+
+.product-image__large {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* select colors */
+.color-dots-container {
+    display: flex;
+    gap: 10px;
+}
+
+.color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.out-of-stock {
+    box-shadow: 0 0 0 2px #999999;
+}
+
+.selected-dot {
+    position: relative;
+    border-radius: 50%;
+    background-color: #fff;
+
+    box-shadow: 0 0 0 1px white;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px var(--special-color);
+    }
+}
+
 
 /* breadcrumbs for products only*/
 .product__breadcrumbs {
@@ -40,8 +114,19 @@
 /* For medium devices */
 @media screen and (max-width: 992px) {
     .product__breadcrumbs {
-       padding-top: calc(var(--header-height) + 2rem) !important;
+        padding-top: calc(var(--header-height) + 2rem) !important;
     }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .color-dot {
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50% !important;
+        margin-right: 3px !important;
+    }
+
 }
 
 /* For small devices */
@@ -49,4 +134,9 @@
     .product__breadcrumbs {
         display: none;
     }
+
+    .product-page__container {
+        padding-top: var(--header-height);
+    }
+
 }
