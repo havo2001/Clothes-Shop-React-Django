@@ -3,7 +3,7 @@ import './header.css';
 import Search from '../search/Search';
 import { Link, useLocation } from "react-router-dom";
 import Order from '../../data/Order';
-import { menuItemsData } from '../../data/Menu';
+import { subMenuItems, categories } from '../../data/Categories';
 
 const Header = () => {
     const location = useLocation();
@@ -31,7 +31,13 @@ const Header = () => {
                     <div className={navToggle ? "nav__menu show-menu" : "nav__menu"}>
                         <ul className='nav__list grid'>
                             <li className="nav__item">
-                                <a href="/home" className={`nav__link ${location.pathname === '/home' || location.pathname === '/index.html' ? 'active-link' : ''}`}>HOME</a>
+                                <a href="/all" className={`nav__link ${location.pathname === '/all' ? 'active-link' : ''}`}>Все</a>
+                            </li>
+                            <li className="nav__item">
+                                <a href="/new" className={`nav__link ${location.pathname === '/new' ? 'active-link' : ''}`}>Новинки</a>
+                            </li>
+                            <li className="nav__item">
+                                <a href="/bijouterie" className={`nav__link ${location.pathname === '/bijouterie' ? 'active-link' : ''}`}>Бижутерия</a>
                             </li>
                             {/* Left-arrow for small device */}
                             <li className='nav-parent__item grid'>
@@ -40,16 +46,16 @@ const Header = () => {
                                     onMouseEnter={() => window.innerWidth > 992 && setShowSubMenu(true)}  // Hover effect only for large devices
                                     onMouseLeave={() => window.innerWidth > 992 && setShowSubMenu(false)}  // Hover effect only for large devices
                                 >
-                                    <a href="/category" className={`nav__link ${location.pathname === '/category' ? 'active-link' : ''}`}>
+                                    <a href="/clothes" className={`nav__link ${location.pathname === '/clothes' ? 'active-link' : ''}`}>
                                         <div className='parent-item'>
-                                            <span className="category-text">CATEGORY</span>
+                                            <span className="category-text">Одежда</span>
                                             <i className="uil uil-angle-down down-icon"></i>
                                             {showSubMenu && window.innerWidth > 992 && (
                                                 <ul className="sub-menu-desktop__category">
-                                                    {menuItemsData.map((item) => (
+                                                    {subMenuItems.map((item) => (
                                                         <li className='sub-menu__item' key={item.cateName}>
                                                             <Link to={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
-                                                                {item.cateName}
+                                                                {item.display}
                                                             </Link>
                                                         </li>
                                                     ))}
@@ -61,26 +67,24 @@ const Header = () => {
                             </li>
 
                             <li className="nav__item">
-                                <a href="/delivery" className={`nav__link ${location.pathname === '/delivery' ? 'active-link' : ''}`}>DELIVERY</a>
+                                <a href="/accessories" className={`nav__link ${location.pathname === '/accessories' ? 'active-link' : ''}`}>Аксессуары</a>
                             </li>
-                            <li className="nav__item">
-                                <a href="/contact" className={`nav__link ${location.pathname === '/contact' ? 'active-link' : ''}`}>CONTACT</a>
-                            </li>
+            
                         </ul>
                     </div>
                     {showSubMenu && window.innerWidth <= 992 && (
                         <ul className="sub-menu__category">
                             <div className='back__container grid'> <i className="uil uil-arrow-right right-arrow-icon" onClick={() => !handleSubMenuToggle()}></i>
                                 {window.innerWidth <= 992 && ( // Check for mobile devices
-                                    <a href="/category" className={`nav__link current-parent ${location.pathname === '/category' ? 'active-link' : ''}`}>
-                                        CATEGORY
+                                    <a href="/clothes" className={`nav__link current-parent ${location.pathname === '/clothes' ? 'active-link' : ''}`}>
+                                        Одежда
                                     </a>
                                 )}</div>
 
-                            {menuItemsData.map((item) => (
+                            {subMenuItems.map((item) => (
                                 <li className='sub-menu__item' key={item.cateName}>
                                     <Link to={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
-                                        {item.cateName}
+                                        {item.display}
                                     </Link>
                                 </li>
                             ))}

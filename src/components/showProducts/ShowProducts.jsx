@@ -29,7 +29,7 @@ const ShowProducts = ({ catName }) => {
         </div>
         <div className="load-more__container">
           <button className={isActiveLoad ? 'load-more__text load-more__active' : 'load-more__text'} onClick={handleClickLoad}>
-            Load more
+            Ещё
           </button>
         </div>
       </section>

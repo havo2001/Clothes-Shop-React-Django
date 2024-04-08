@@ -17,8 +17,8 @@ function Search({ isOpen, toggleSearch }) {
                     <div className="search__bar">
                         <div className='form__container'>
                             <div className='form__box form__container'>
-                                <input type='text' placeholder='Search query...' />
-                                <button className='form__button search__button'>Search</button>
+                                <input type='text' placeholder='Искать товары...' />
+                                <button className='form__button search__button'>Поиск</button>
                             </div>
                             <button className='search__close' onClick={toggleSearch}>
                                 <i className="uil uil-times"></i>

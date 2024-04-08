@@ -1,7 +1,7 @@
 const products = [{
     id: 11,
-    productName: "Cotton T-shirt",
-    cateName: "Tops",
+    productName: "Хлопковая футболка",
+    cateName: "Tops | T-shirts | Long sleeves",
     price: "2500₽",
     image: "/assets/products/9.jpg",
     image_hover: "/assets/products/9_hover.jpg",
@@ -9,7 +9,7 @@ const products = [{
 },
 {
     id: 1,
-    productName: "Sweatshirt Dress",
+    productName: "Свитшот-платье",
     cateName: "Dresses",
     price: "1000₽",
     image: "/assets/products/1.jpg",
@@ -17,7 +17,7 @@ const products = [{
 },
 {
     id: 2,
-    productName: "Linen-blend Dress",
+    productName: "Льняное платье",
     cateName: "Dresses",
     price: "1500₽",
     image: "/assets/products/2.jpg",
@@ -25,8 +25,8 @@ const products = [{
 },
 {
     id: 5,
-    productName: "High Waist Joggers",
-    cateName: "Pants",
+    productName: "Спортивная мини-юбка",
+    cateName: "Skirts",
     price: "2000₽",
     image: "/assets/products/3.jpg",
     image_hover: "/assets/products/3_hover.jpg"
@@ -61,11 +61,11 @@ const colors = [[
 ],
 [
     {
-        color: "#373737",
+        color: "#D9D9D9",
         id: 5
     },
     {
-        color: "#D9D9D9",
+        color: "#6D98BE",
         id: 6
     }
 ]

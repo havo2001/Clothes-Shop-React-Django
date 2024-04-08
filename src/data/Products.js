@@ -3,7 +3,7 @@ const Products = [
     {
         id: 1,
         model_id: 1,
-        productName: "Sweatshirt Dress",
+        productName: "Свитшот-платье",
         price: "1000₽",
         color: "#373737",
         size: "S",
@@ -13,7 +13,7 @@ const Products = [
     {
         id: 2,
         model_id: 2,
-        productName: "Linen-blend Dress",
+        productName: "Льняное платье",
         price: "1500₽",
         color: "#08B5F2",
         size: "L",
@@ -23,7 +23,7 @@ const Products = [
     {
         id: 3,
         model_id: 2,
-        productName: "Linen-blend Dress",
+        productName: "Льняное платье",
         price: "1500₽",
         color: "#08B5F2",
         size: "S",
@@ -33,7 +33,7 @@ const Products = [
     {
         id: 4,
         model_id: 1,
-        productName: "Sweatshirt Dress",
+        productName: "Свитшот-платье",
         price: "1000₽",
         color: "#D9D9D9",
         size: "M",
@@ -43,9 +43,9 @@ const Products = [
     {
         id: 5,
         model_id: 3,
-        productName: "High Waist Joggers",
+        productName: "Спортивная мини-юбка",
         price: "2000₽",
-        color: "#373737",
+        color: "#D9D9D9",
         size: "M",
         image: "/assets/products/3.jpg",
         image_hover: "/assets/products/3_hover.jpg"
@@ -53,9 +53,9 @@ const Products = [
     {
         id: 6,
         model_id: 3,
-        productName: "High Waist Joggers",
+        productName: "Спортивная мини-юбка",
         price: "2000₽",
-        color: "#D9D9D9",
+        color: "#6D98BE",
         size: "L",
         image: "/assets/products/4.jpg",
         image_hover: "/assets/products/4_hover.jpg"
@@ -104,7 +104,7 @@ const Products = [
     {
         id: 11,
         model_id: 7,
-        productName: "Cotton T-shirt",
+        productName: "Хлопковая футболка",
         price: "2500₽",
         color: "#919191",
         size: "L",
@@ -114,7 +114,7 @@ const Products = [
     {
         id: 12,
         model_id: 7,
-        productName: "Cotton T-shirt",
+        productName: "Хлопковая футболка",
         price: "2500₽",
         color: "#373737",
         size: "M",
@@ -124,7 +124,7 @@ const Products = [
     {
         id: 13,
         model_id: 7,
-        productName: "Cotton T-shirt",
+        productName: "Хлопковая футболка",
         price: "2500₽",
         color: "#D9D9D9",
         size: "M",
@@ -147,40 +147,40 @@ const Models = [
     {
         cateName: "Dresses",
         model_id: 1,
-        productName: "Sweatshirt Dress",
+        productName: "Свитшот-платье",
     },
     {
         cateName: "Dresses",
         model_id: 2,
-        productName: "Linen-blend Dress",
+        productName: "Льняное платье",
     },
     {
-        cateName: "Pants",
+        cateName: "Skirts",
         model_id: 3,
-        productName: "High Waist Joggers",
+        productName: "Спортивная мини-юбка",
     },
     {
-        cateName: "Bags",
+        cateName: "Accessories",
         model_id: 4,
         productName: "Straw Shopper"
     },
     {
-        cateName: "Bags",
+        cateName: "Accessories",
         model_id: 5,
         productName: "Crossbody Bag"
     },
     {
-        cateName: "Shoes",
+        cateName: "Accessories",
         model_id: 6,
         productName: "Chunky Sneakers"
     },
     {
         cateName: "Tops",
         model_id: 7,
-        productName: "Cotton T-shirt"
+        productName: "Хлопковая футболка"
     },
     {
-        cateName: "Shoes",
+        cateName: "Accessories",
         model_id: 8,
         productName: "Ankle Strap Sandals"
 

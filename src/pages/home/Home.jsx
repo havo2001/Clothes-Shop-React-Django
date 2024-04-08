@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './home.css';
-import BestSeller from '../../components/bestSeller/BestSeller';
+import New from '../../components/new/New';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
@@ -16,7 +16,7 @@ const Home = () => {
         <Header />
         <div className='home__container'>
           <img src="/assets/cropped-background.jpg" alt="home__image" className='home__image' onLoad={handleImageLoad}></img>
-          {imageLoaded && <BestSeller />}
+          {imageLoaded && <New />}
         </div>
         {imageLoaded && <Footer />}
       </section>

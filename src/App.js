@@ -22,8 +22,11 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/delivery" element={<Delivery />} />
-          <Route path="/category/:category/:productNameOrId" element={<ProductPage />} />
-          <Route path="/category/:category" element={<DetailedCategory />} />
+          <Route path="/clothes/:category/:productNameOrId" element={<ProductPage />} />
+          <Route path="/clothes/:category" element={<DetailedCategory />} />
+          <Route path="/:category" element={<DetailedCategory />} />
+          <Route path="/all" element={<DetailedCategory />} />
+          <Route path="/new" element={<DetailedCategory />} />
         </Routes>
       </Router>
     </div>

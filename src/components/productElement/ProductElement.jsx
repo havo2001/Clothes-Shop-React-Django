@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import './productElement.css';
 import { Link } from "react-router-dom";
+import { categories } from '../../data/Categories';
 
 const ProductElement = ({ id, productName, cateName, price, image, image_hover, colors }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const findUrlsByCateName = (categories, cateName) => {
+        const matchedCategories = categories.filter(category => category.cateName === cateName);
+        const url = matchedCategories.map(category => category.url);
+        return url;
+    };
+
+    const url = findUrlsByCateName(categories, cateName);
+
 
     return (
         <div className="product__container">
-            <Link to={`/category/${cateName.toLowerCase()}/${id}`}>
+            <Link to={`${url}/${id}`}>
                 <img
                     className="product__img"
                     src={isHovered ? image_hover : image}
@@ -22,7 +31,7 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                 {colors.map(colorObj => (
                     <Link
                         key={colorObj.color}
-                        to={`/category/${cateName.toLowerCase()}/${colorObj.id}`}
+                        to={`${url}/${colorObj.id}`}
                         className="color-link"
                     >
                         <span
@@ -32,7 +41,7 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                                 width: '10px',
                                 height: '10px',
                                 borderRadius: '50%',
-                                display: 'inline-block', 
+                                display: 'inline-block',
                                 marginRight: '5px'
                             }}
                         ></span>

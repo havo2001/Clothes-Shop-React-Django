@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import './breadCrumbs.css';
+import { breadCrumbsDisplay } from '../../data/Categories';
 
 const BreadCrumbs = () => {
     const location = useLocation();
@@ -11,14 +12,15 @@ const BreadCrumbs = () => {
         .filter(crumb => crumb !== '')
         .map(crumb => {
             currentLink += `/${crumb}`;
-            const capitalizedCrumb = crumb.charAt(0).toUpperCase() + crumb.slice(1);
+            const breadcrumbInfo = breadCrumbsDisplay.find(item => item.crumb === crumb);
+            const display = breadcrumbInfo ? breadcrumbInfo.display : crumb;
 
             return (
                 <div className="crumb" key={crumb}>
-                    <Link to={currentLink}>{capitalizedCrumb}</Link>
+                    <Link to={currentLink}>{display}</Link>
                 </div>
             )
-        })
+        });
 
     return (
         <>
@@ -27,4 +29,4 @@ const BreadCrumbs = () => {
     )
 }
 
-export default BreadCrumbs
+export default BreadCrumbs;
