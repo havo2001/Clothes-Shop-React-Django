@@ -34,17 +34,12 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                         to={`${url}/${colorObj.id}`}
                         className="color-link"
                     >
-                        <span
+                        <div
                             className="color-dot"
                             style={{
                                 backgroundColor: colorObj.color,
-                                width: '10px',
-                                height: '10px',
-                                borderRadius: '50%',
-                                display: 'inline-block',
-                                marginRight: '5px'
                             }}
-                        ></span>
+                        ></div>
                     </Link>
                 ))}
             </div>

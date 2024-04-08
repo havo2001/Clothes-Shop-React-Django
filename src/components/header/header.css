@@ -235,7 +235,6 @@
 
     .current-parent {
         font-weight: var(--font-semi-bold);
-        color: var(--theme-color);
     }
 
     .sub-menu__item {
