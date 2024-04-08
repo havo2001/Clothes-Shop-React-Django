@@ -1,6 +1,5 @@
 /* general breadcrumbs */
 .breadcrumbs {
-    margin-top: calc(var(--header-height) + 1.5rem);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: flex;
@@ -33,6 +32,12 @@
     color: var(--theme-color);
 }
 
+/* For medium devices */
+@media screen and (max-width: 992px) {
+    .breadcrumbs {
+       padding-top: calc(var(--header-height) + 2rem) !important;
+    }
+}
 
 /* For small devices */
 @media screen and (max-width: 460px) {

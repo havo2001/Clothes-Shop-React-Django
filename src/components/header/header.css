@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -117,8 +117,8 @@
 /* ------------------------------- BREAKPOINTS ------------------------------ */
 /* For medium devices */
 @media screen and (max-width: 992px) {
-    .nav {
-        height: calc(var(--header-height) + 1rem);
+    .header {
+        position: fixed;
     }
 
     .nav__overlay {
@@ -129,6 +129,7 @@
         position: fixed;
         background-color: rgba(49, 49, 49, 0.5);
         z-index: 1000;
+        overflow: hidden !important;
     }
 
     .nav__toggle {
@@ -140,7 +141,8 @@
         position: fixed;
         top: calc(var(--header-height) + 1rem);
         right: -100%;
-        width: 100%;
+        width: 80%;
+        height: 100%;
         background-color: var(--container-color);
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -158,7 +160,7 @@
     .nav__list {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     /* Push the items in the list to the right */
@@ -176,18 +178,11 @@
         color: var(--title-color);
     }
 
-    /* .nav__close:hover {
-        color: var(--theme-color);
-    } */
 
     .nav__toggle {
         font-size: 1.25rem;
         cursor: pointer;
     }
-
-    /* .nav__toggle:hover {
-        color: var(--theme-color);
-    } */
 
     .nav__close,
     .nav__toggle {
@@ -213,13 +208,12 @@
     .sub-menu__category {
         display: block;
         position: absolute;
-        width: 100% !important;
+        right: 0;
+        width: 80% !important;
+        height: 100%;
         background-color: var(--container-color);
-        padding-bottom: 0rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding: 1.5rem 1.5rem 4rem;
         z-index: 1000;
-        /* padding: 2rem 1.5rem 4rem; */
         transition: .3s;
     }
 
@@ -237,6 +231,11 @@
     .sub-menu__item {
         margin-left: auto;
         margin-bottom: 1rem;
+    }
+
+    .current-parent {
+        font-weight: var(--font-semi-bold);
+        color: var(--theme-color);
     }
 
     .sub-menu__item {

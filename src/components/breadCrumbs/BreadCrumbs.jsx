@@ -24,7 +24,11 @@ const BreadCrumbs = () => {
 
     return (
         <>
-            <section className='breadcrumbs'>{crumbs}</section>
+
+            <section className='breadcrumbs'>
+                {crumbs}
+            </section >
+
         </>
     )
 }

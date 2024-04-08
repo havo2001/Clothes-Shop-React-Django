@@ -16,6 +16,7 @@
     background-color: transparent;
     color: var(--theme-color);
     text-decoration: underline;
+    font-size: var(--small-font-size);
 }
 
 .load-more__text:hover {

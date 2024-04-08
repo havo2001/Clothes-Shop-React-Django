@@ -69,7 +69,7 @@ const Header = () => {
                             <li className="nav__item">
                                 <a href="/accessories" className={`nav__link ${location.pathname === '/accessories' ? 'active-link' : ''}`}>Аксессуары</a>
                             </li>
-            
+
                         </ul>
                     </div>
                     {showSubMenu && window.innerWidth <= 992 && (
@@ -80,6 +80,7 @@ const Header = () => {
                                         Одежда
                                     </a>
                                 )}</div>
+                            <hr className="submenu-divider" />
 
                             {subMenuItems.map((item) => (
                                 <li className='sub-menu__item' key={item.cateName}>
