@@ -13,10 +13,14 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
 
     const url = findUrlsByCateName(categories, cateName);
 
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
+
 
     return (
         <div className="product__container">
-            <Link to={`${url}/${id}`}>
+            <Link to={`${url}/${id}`} onClick={scrollToTop}>
                 <img
                     className="product__img"
                     src={isHovered ? image_hover : image}
@@ -33,6 +37,7 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                         key={colorObj.color}
                         to={`${url}/${colorObj.id}`}
                         className="color-link"
+                        onClick={scrollToTop}
                     >
                         <svg className="element-color-dot" viewBox="0 0 14 14" width="14" height="14">
                             <circle cx="7" cy="7" r="6" fill={colorObj.color} />
