@@ -20,7 +20,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/delivery" element={<Delivery />} />
-          <Route path="/clothes/:category/:productNameOrId" element={<ProductPage />} />
+          <Route path="/clothes/:category/:productId" element={<ProductPage />} />
+          <Route path="/:category/:productId" element={<ProductPage />} />
           <Route path="/clothes/:category" element={<DetailedCategory />} />
           <Route path="/:category" element={<DetailedCategory />} />
           <Route path="/all" element={<DetailedCategory />} />
@@ -30,6 +31,24 @@ function App() {
     </div>
   );
 }
+// This will give you experience, because those are more challenging than real jobs
+// Only the main branch will be deployed to the server. if you merge changes usually it's on the main branch so it goes to production directly
+// He will setup the ci/cd and server
+// Nginx is a http server/proxy
+// You backend guy can be devops
+// but nginx are on the server
+// It all depends on you
 
+// When react started, react router wasn't this good. People made it better.
+// When you make changes, you don't make them in the main branch, it's a different branch and people will check your changes before committing hem
+// When you bargain you start high, then lowers it
+// If you friend have said 20 the owner would still accept it
+// So you say something high and see the owners reaction.
+// Shopping card
+// why would you use product name in the url????
+// In the url, don't work with names, just work with id
+
+// if you know that all products will have something like:
+// clothes/category/productId
 export default App;
 

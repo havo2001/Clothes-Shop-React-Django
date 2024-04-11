@@ -88,7 +88,7 @@ const Header = () => {
                                         Одежда
                                     </a>
                                 )}</div>
-                            <hr className="submenu-divider" />
+                            <hr className="header-divider" />
 
                             {subMenuItems.map((item) => (
                                 <li className='sub-menu__item' key={item.cateName}>

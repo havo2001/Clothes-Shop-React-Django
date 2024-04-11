@@ -27,19 +27,16 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                 <p className='product__name'>{productName}</p>
             </Link>
             <p className='product__price'>{price}</p>
-            <div className="color-dots-container">
+            <div className="element-color-dots-container">
                 {colors.map(colorObj => (
                     <Link
                         key={colorObj.color}
                         to={`${url}/${colorObj.id}`}
                         className="color-link"
                     >
-                        <div
-                            className="color-dot"
-                            style={{
-                                backgroundColor: colorObj.color,
-                            }}
-                        ></div>
+                        <svg className="element-color-dot" viewBox="0 0 14 14" width="14" height="14">
+                            <circle cx="7" cy="7" r="6" fill={colorObj.color} />
+                        </svg>
                     </Link>
                 ))}
             </div>

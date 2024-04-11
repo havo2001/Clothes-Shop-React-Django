@@ -121,6 +121,17 @@
         position: fixed;
     }
 
+    .nav {
+        margin-top: 0 !important;
+    }
+
+    .header-divider {
+        border: none;
+        height: 2px;
+        background-color: var(--shadow-color);
+        margin-right: 8rem;
+    }
+
     .nav__overlay {
         top: calc(var(--header-height) + 1rem);
         left: 0;
@@ -256,6 +267,10 @@
         /* Pushes the item to the right */
         margin-right: 1rem;
     }
+
+    .header-divider {
+        margin-right: 1rem;
+    }
 }
 
 
@@ -270,6 +285,10 @@
     .nav__item {
         margin-left: auto;
         /* Pushes the item to the right */
+        margin-right: 0.5rem;
+    }
+
+    .header-divider {
         margin-right: 0.5rem;
     }
 }

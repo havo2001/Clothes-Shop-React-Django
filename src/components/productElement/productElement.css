@@ -10,15 +10,9 @@
     font-size: var(--small-font-size);
 }
 
-.color-dots-container {
+.element-color-dots-container {
     display: flex;
     gap: 5px;
-}
-
-.color-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
 }
 
 /* For medium devices */
@@ -26,10 +20,9 @@
     .color-dots-container {
         gap: 3px !important;
     }
-    .color-dot {
-        width: 7px !important;
-        height: 7px !important;
-        border-radius: 50% !important;
-    }
 
+    .element-color-dot {
+        width: 10px;
+        height: 10px;
+    }
 }
