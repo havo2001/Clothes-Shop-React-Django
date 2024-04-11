@@ -77,6 +77,7 @@ const ProductPage = () => {
     let currentLink = '';
 
 
+
     const crumbs = location.pathname.split('/')
         .filter(crumb => crumb !== '')
         .map((crumb, index, array) => {
