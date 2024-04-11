@@ -139,12 +139,12 @@ const ProductPage = () => {
 
 
     // Add to cart button:
-    const [quantity, setQuantity] = useState(Order.numOrders);
+    const [quantity, setQuantity] = useState(0);
 
     const addToCart = () => {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity);
-        Order.numOrders = newQuantity;
+        Order.numOrders += 1;
     }
 
     return (
@@ -245,10 +245,16 @@ const ProductPage = () => {
                                     <button className='increase-btn' onClick={increase}>+</button> :
                                     <button className='increase-btn'>+</button>}
                             </div>
-                            <button className='add-to-cart' onClick={addToCart}>
-                                <i className='uil uil-shopping-cart-alt page-cart__icon'></i>
-                                <p className='cart__text'>В Корзину</p>
-                            </button>
+                            {quantity < testProduct.quantity ?
+                                <button className='add-to-cart' onClick={addToCart}>
+                                    <i className='uil uil-shopping-cart-alt page-cart__icon'></i>
+                                    <p className='cart__text'>В Корзину</p>
+                                </button> :
+                                <button className='add-to-cart'>
+                                    <i className='uil uil-shopping-cart-alt page-cart__icon'></i>
+                                    <p className='cart__text'>В Корзину</p>
+                                </button>}
+
                         </div>
                     </div>
 
