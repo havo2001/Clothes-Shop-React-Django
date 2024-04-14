@@ -24,8 +24,6 @@ function App() {
           <Route path="/:category/:productId" element={<ProductPage />} />
           <Route path="/clothes/:category" element={<DetailedCategory />} />
           <Route path="/:category" element={<DetailedCategory />} />
-          <Route path="/all" element={<DetailedCategory />} />
-          <Route path="/new" element={<DetailedCategory />} />
         </Routes>
       </HashRouter>
     </div>
