@@ -142,9 +142,9 @@ const ProductPage = () => {
     const [quantity, setQuantity] = useState(0);
 
     const addToCart = () => {
-        const newQuantity = quantity + 1;
+        const newQuantity = productQuantity;
         setQuantity(newQuantity);
-        Order.numOrders += 1;
+        Order.numOrders += productQuantity;
     }
 
     return (
