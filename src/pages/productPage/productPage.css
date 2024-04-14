@@ -254,6 +254,24 @@
     .recommend__title {
         margin-bottom: 3rem;
     }
+
+    .product-image__container {
+        width: 100%;
+        position: relative;
+    }
+
+    .small-images {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .small-product-image {
+        flex: 1;
+        height: auto;
+        width: calc(25% - 8px);
+        aspect-ratio: 1;
+    }
 }
 
 /* For medium devices */
@@ -289,25 +307,6 @@
     .product-information__container {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .product-image__container {
-        width: 100%;
-        position: relative;
-        /* Ensure absolute positioning inside works */
-    }
-
-    .small-images {
-        display: flex;
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    .small-product-image {
-        flex: 1;
-        height: auto;
-        width: calc(25% - 8px);
-        aspect-ratio: 1;
     }
 
 }

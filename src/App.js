@@ -7,12 +7,12 @@ import ProductPage from './pages/productPage/ProductPage';
 import DetailedCategory from './pages/detailedCategory/DetailedCategory';
 
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/all" element={<DetailedCategory />} />
           <Route path="/new" element={<DetailedCategory />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </div>
   );
 }

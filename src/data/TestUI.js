@@ -30,6 +30,14 @@ const products = [{
     price: "2000₽",
     image: "/assets/products/3.jpg",
     image_hover: "/assets/products/3_hover.jpg"
+},
+{
+    id: 10,
+    productName: "Массивные кроссовки",
+    cateName: "Accessories",
+    price: "2500₽",
+    image: "/assets/products/8.jpg",
+    image_hover: "/assets/products/8_hover.jpg"
 }
 ]
 
@@ -67,6 +75,12 @@ const colors = [[
     {
         color: "#6D98BE",
         id: 6
+    }
+],
+[
+    {
+        color: "#D9D9D9",
+        id: 10
     }
 ]
 ]

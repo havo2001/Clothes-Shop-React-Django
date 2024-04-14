@@ -26,6 +26,7 @@
 
 .cat__item {
     background-color: transparent;
+    color: var(--text-color);
 }
 
 

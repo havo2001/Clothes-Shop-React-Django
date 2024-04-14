@@ -255,8 +255,8 @@ img {
 /* For large devices */
 @media screen and (max-width: 992px) {
   .container {
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
   }
 }
 

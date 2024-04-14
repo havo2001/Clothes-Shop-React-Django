@@ -180,7 +180,7 @@
     .nav__item {
         margin-left: auto;
         /* Pushes the item to the right */
-        margin-right: 8rem;
+        margin-right: 2rem;
     }
 
     .nav__close {

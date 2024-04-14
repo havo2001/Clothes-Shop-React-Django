@@ -172,7 +172,7 @@ const Models = [
     {
         cateName: "Accessories",
         model_id: 6,
-        productName: "Chunky Sneakers"
+        productName: "Массивные кроссовки"
     },
     {
         cateName: "Tops",
