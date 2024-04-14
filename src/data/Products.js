@@ -94,7 +94,7 @@ const Products = [
     {
         id: 10,
         model_id: 6,
-        productName: "Chunky Sneakers",
+        productName: "Массивные кроссовки",
         price: "2500₽",
         color: "#D9D9D9",
         size: "37",
