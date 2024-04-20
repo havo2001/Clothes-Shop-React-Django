@@ -90,7 +90,7 @@ const ProductPage = () => {
 
             return (
                 <div className="crumb" key={crumb}>
-                    <Link to={currentLink}>{productName}</Link>
+                    <Link className="crumb-link" to={currentLink}>{productName}</Link>
                 </div>
             );
         });

@@ -1,7 +1,7 @@
 const products = [{
     id: 11,
     productName: "Хлопковая футболка",
-    cateName: "Tops | T-shirts | Long sleeves",
+    cateName: "Tops",
     price: "2500₽",
     image: "/assets/products/9.jpg",
     image_hover: "/assets/products/9_hover.jpg",

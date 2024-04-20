@@ -17,7 +17,7 @@ const BreadCrumbs = () => {
 
             return (
                 <div className="crumb" key={crumb}>
-                    <Link to={currentLink}>{display}</Link>
+                    <Link className="crumb-link" to={currentLink}>{display}</Link>
                 </div>
             )
         });

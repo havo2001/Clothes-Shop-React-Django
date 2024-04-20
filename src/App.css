@@ -14,6 +14,7 @@
   --theme-color-light: #FBF5F5;
   --text-color: #373737;
   --box-color: #F5F7F7;
+  --gray-color: #D6D6D6;
   --shadow-color: #F6F7F8;
   --container-color: #fff;
 
@@ -21,7 +22,7 @@
   /* .5rem = 8px, 1rem = 16px */
   --body-font: "Poppins", sans-serif;
   --big-font-size: 3rem;
-  --h1-font-size: 2.25rem;
+  --h1-font-size: 2.0rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
@@ -55,10 +56,10 @@
 
 
 /* Responsive typography */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   :root {
     --big-font-size: 2.5rem;
-    --h1-font-size: 1.5rem;
+    --h1-font-size: 1.75rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: 0.938rem;
@@ -70,7 +71,7 @@
 @media screen and (max-width: 460px) {
   :root {
     --big-font-size: 2rem;
-    --h1-font-size: 1.25rem;
+    --h1-font-size: 1.5rem;
     --h2-font-size: 1rem;
     --h3-font-size: 0.85rem;
     --normal-font-size: 0.75rem;
@@ -162,8 +163,8 @@ img {
 /* --------------------------------- LAYOUT --------------------------------- */
 .container {
   max-width: 100%;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .grid {
@@ -252,6 +253,14 @@ img {
 }
 
 /* ------------------------------- RESPONSIVE ------------------------------- */
+/* For larger devices */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
 /* For large devices */
 @media screen and (max-width: 992px) {
   .container {

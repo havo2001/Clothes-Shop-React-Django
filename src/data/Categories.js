@@ -17,15 +17,33 @@ const categories = [
     },
 
     {
-        cateName: "Tops | T-shirts | Long sleeves",
-        display: "Топ | Футболки | Лонгсливы",
-        url: "/clothes/tops-tshirts-longsleeves"
+        cateName: "Tops",
+        display: "Топ",
+        url: "/clothes/tops"
     },
 
     {
-        cateName: "Bodysuits | Overalls",
-        display: "Боди, Комбинезоны",
-        url: "/clothes/bodysuits-overalls"
+        cateName: "T-shirts",
+        display: "Футболки",
+        url: "/clothes/tshirts"
+    },
+
+    {
+        cateName: "Long sleeves",
+        display: "Лонгсливы",
+        url: "/clothes/longsleeves"
+    },
+
+    {
+        cateName: "Bodysuits",
+        display: "Боди",
+        url: "/clothes/bodysuits"
+    },
+
+    {
+        cateName: "Overalls",
+        display: "Комбинезоны",
+        url: "/clothes/overalls"
     },
 
     {
@@ -35,9 +53,15 @@ const categories = [
     },
 
     {
-        cateName: "Blouses | Shirts",
-        display: "Блузки | Рубашки",
-        url: "/clothes/blouses-shirts"
+        cateName: "Blouses",
+        display: "Блузки",
+        url: "/clothes/blouses"
+    },
+
+    {
+        cateName: "Shirts",
+        display: "Рубашки",
+        url: "/clothes/shirts"
     },
 
     {
@@ -51,6 +75,12 @@ const categories = [
         display: "Нижнее Белье",
         url: "/clothes/underwear"
     },
+
+    {
+        cateName: "Pijama",
+        display: "Пижама",
+        url: "/clothes/pijama"
+    }
 ];
 
 const subMenuItems = [
@@ -61,15 +91,27 @@ const subMenuItems = [
     },
 
     {
-        cateName: "Tops | T-shirts | Long sleeves",
-        display: "Топ | Футболки | Лонгсливы",
-        url: "/clothes/tops-tshirts-longsleeves"
+        cateName: "Bodysuits",
+        display: "Боди",
+        url: "/clothes/bodysuits"
     },
 
     {
-        cateName: "Bodysuits | Overalls",
-        display: "Боди, Комбинезоны",
-        url: "/clothes/bodysuits-overalls"
+        cateName: "Tops",
+        display: "Топ",
+        url: "/clothes/tops"
+    },
+
+    {
+        cateName: "Long sleeves",
+        display: "Лонгсливы",
+        url: "/clothes/longsleeves"
+    },
+
+    {
+        cateName: "T-shirts",
+        display: "Футболки",
+        url: "/clothes/tshirts"
     },
 
     {
@@ -79,9 +121,15 @@ const subMenuItems = [
     },
 
     {
-        cateName: "Blouses | Shirts",
-        display: "Блузки | Рубашки",
-        url: "/clothes/blouses-shirts"
+        cateName: "Blouses",
+        display: "Блузки",
+        url: "/clothes/blouses"
+    },
+
+    {
+        cateName: "Shirts",
+        display: "Рубашки",
+        url: "/clothes/shirts"
     },
 
     {
@@ -94,6 +142,18 @@ const subMenuItems = [
         cateName: "Underwear",
         display: "Нижнее Белье",
         url: "/clothes/underwear"
+    },
+
+    {
+        cateName: "Pijama",
+        display: "Пижама",
+        url: "/clothes/pijama"
+    },
+    
+    {
+        cateName: "Overalls",
+        display: "Комбинезоны",
+        url: "/clothes/overalls"
     }
 ]
 
@@ -132,13 +192,28 @@ const breadCrumbsDisplay = [
     },
 
     {
-        display: "Топ | Футболки | Лонгсливы",
-        crumb: "tops-tshirts-longsleeves"
+        display: "Топ",
+        crumb: "tops"
     },
 
     {
-        display: "Боди, Комбинезоны",
-        crumb: "bodysuits-overalls"
+        display: "Футболки",
+        crumb: "tshirts"
+    },
+
+    {
+        display: "Лонгсливы",
+        crumb: "longsleeves"
+    },
+
+    {
+        display: "Боди",
+        crumb: "bodysuits"
+    },
+
+    {
+        display: "Комбинезоны",
+        crumb: "overalls"
     },
 
     {
@@ -147,8 +222,13 @@ const breadCrumbsDisplay = [
     },
 
     {
-        display: "Блузки | Рубашки",
-        crumb: "blouses-shirts"
+        display: "Блузки",
+        crumb: "blouses"
+    },
+
+    {
+        display: "Рубашки",
+        crumb: "shirts"
     },
 
     {

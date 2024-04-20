@@ -12,16 +12,6 @@ const Header = () => {
     const [showSubMenuMobile, setShowSubMenuMobile] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    // Handle click event for submenu toggle
-    const handleSubMenuToggle = () => {
-        setShowSubMenu(!showSubMenu);
-        // setShowSubMenuMobile(false); // Reset mobile submenu visibility
-    };
-
-    const handleSubMenuToggleMobile = () => {
-        setShowSubMenuMobile(!showSubMenuMobile);
-    };
-
     // Function to toggle search
     const toggleSearch = () => {
         // Check if nav bar is not toggled
@@ -32,88 +22,165 @@ const Header = () => {
 
     return (
         <header className='header'>
+            <a href="/index.html" className={navToggle ? "nav__logo-small-under" : "nav__logo-small"}>Mollywlove</a>
             <nav className='nav container'>
-                <a href="/index.html" className='logo'>Mollywlove</a>
-
+                <div className="nav__toggle" onClick={() => showMenu(!navToggle)}>
+                    <i className='uil uil-bars'></i>
+                </div>
+                {/* Phone */}
+                <div className="nav__phone grid">
+                    <i className="nav__phone-icon uil uil-phone"></i>
+                    <p className='nav__phone-number'>+7 123456789</p>
+                </div>
                 <div className={navToggle ? 'nav__overlay' : ''}>
+                    {/* Nav left */}
                     <div className={navToggle ? "nav__menu show-menu" : "nav__menu"}>
-                        <ul className='nav__list grid'>
-                            <li className="nav__item">
-                                <a href="/all" className={`nav__link ${location.pathname === '/all' ? 'active-link' : ''}`}>Все</a>
-                            </li>
-                            <li className="nav__item">
-                                <a href="/new" className={`nav__link ${location.pathname === '/new' ? 'active-link' : ''}`}>Новинки</a>
-                            </li>
-                            <li className="nav__item">
-                                <a href="/bijouterie" className={`nav__link ${location.pathname === '/bijouterie' ? 'active-link' : ''}`}>Бижутерия</a>
-                            </li>
-                            {/* Left-arrow for small device */}
-                            <li className='nav-parent__item grid'>
-                                <i className="uil uil-arrow-left left-arrow-icon" onClick={() => window.innerWidth <= 992 && handleSubMenuToggle()}></i>
-                                <li className="nav__item"
-                                    onMouseEnter={() => window.innerWidth > 992 && setShowSubMenu(true)}  // Hover effect only for large devices
-                                    onMouseLeave={() => window.innerWidth > 992 && setShowSubMenu(false)}  // Hover effect only for large devices
-                                >
-                                    <a href="/clothes" className={`nav__link ${location.pathname === '/clothes' ? 'active-link' : ''}`}>
-                                        <div className='parent-item'>
-                                            <span className="category-text">Одежда</span>
-                                            <i className="uil uil-angle-down down-icon"></i>
-                                            {showSubMenu && window.innerWidth > 992 && (
-                                                <ul className="sub-menu-desktop__category">
-                                                    {subMenuItems.map((item) => (
-                                                        <li className='sub-menu__item' key={item.cateName}>
-                                                            <Link to={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
-                                                                {item.display}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                        </div>
-                                    </a>
-                                </li>
-                            </li>
+                        {navToggle ? <i className="uil uil-times nav__close" onClick={() => { showMenu(!navToggle); setShowSubMenuMobile(false); }}></i>
+                            : <></>}
+                        
+                            <div className={`nav__menu-container ${!showSubMenuMobile ? "show-nav-menu" : ""}`}>
+                                <div className='nav__list-first'>
+                                    <ul className='nav__list grid'>
+                                        <li className="nav__item">
+                                            <a href="/all" className={`nav__link ${location.pathname === '/all' ? 'active-link' : ''}`}>ВСЕ</a>
+                                        </li>
+                                        <li className="nav__item">
+                                            <a href="/new" className={`nav__link ${location.pathname === '/new' ? 'active-link' : ''}`}>НОВИНКИ</a>
+                                        </li>
+                                        <li className="nav__item">
+                                            <a href="/bijouterie" className={`nav__link ${location.pathname === '/bijouterie' ? 'active-link' : ''}`}>БИЖУТЕРИЯ</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                            <li className="nav__item">
-                                <a href="/accessories" className={`nav__link ${location.pathname === '/accessories' ? 'active-link' : ''}`}>Аксессуары</a>
-                            </li>
+                                {/* Logo */}
+                                <a href="/index.html" className='nav__logo-large'>Mollywlove</a>
 
-                        </ul>
-                    </div>
-                    {showSubMenu && window.innerWidth <= 992 && (
-                        <ul className="sub-menu__category">
-                            <div className='back__container grid'> <i className="uil uil-arrow-right right-arrow-icon" onClick={() => !handleSubMenuToggle()}></i>
+                                <div className='nav__list-second'>
+                                    {/* Nav right */}
+                                    <ul className='nav__list grid'>
+                                        {/* Left-arrow for small device */}
+
+                                        <li className='nav-parent__item grid'
+                                            onMouseEnter={() => window.innerWidth > 992 && setShowSubMenu(true)}  // Hover effect only for large devices
+                                            onMouseLeave={() => window.innerWidth > 992 && setShowSubMenu(false)}  // Hover effect only for large devices 
+                                        >
+
+                                            <li className="nav__item">
+                                                <a href="/clothes" className={`nav__link ${location.pathname === '/clothes' ? 'active-link' : ''}`}>
+                                                    <div className='parent-item'>
+                                                        <span className="category-text">ОДЕЖДА</span>
+                                                        <i className="uil uil-angle-down down-icon"></i>
+
+                                                    </div>
+                                                </a>
+                                                {showSubMenu && window.innerWidth > 992 && (
+                                                    <ul className="sub-menu-desktop__category">
+                                                        <div className='sub-menu-desktop__category-container'>
+                                                            <div className='sub-menu-fashionable'>
+                                                                <p className='sub-menu-property'>МОДНЫЙ</p>
+                                                                {subMenuItems.slice(0, 4).map((item) => (
+                                                                    <li className='sub-menu__item' key={item.cateName}>
+                                                                        <a href={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
+                                                                            {item.display}
+                                                                        </a>
+                                                                    </li>
+                                                                ))}
+                                                            </div>
+                                                            <div className='sub-menu-casual'>
+                                                                <p className='sub-menu-property'>ПОВСЕДНЕВНЫЙ</p>
+                                                                {subMenuItems.slice(4, 8).map((item) => (
+                                                                    <li className='sub-menu__item' key={item.cateName}>
+                                                                        <a href={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
+                                                                            {item.display}
+                                                                        </a>
+                                                                    </li>
+                                                                ))}
+                                                            </div>
+                                                            <div className='sub-menu-comfortable'>
+                                                                <p className='sub-menu-property'>КОМФОРТНЫЙ</p>
+                                                                {subMenuItems.slice(8, 12).map((item) => (
+                                                                    <li className='sub-menu__item' key={item.cateName}>
+                                                                        <a href={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
+                                                                            {item.display}
+                                                                        </a>
+                                                                    </li>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    </ul>
+                                                )}
+                                                <i className="uil uil uil-angle-right right-arrow-icon" onClick={() => window.innerWidth <= 992 && setShowSubMenuMobile(!showSubMenuMobile)}></i>
+                                            </li>
+                                        </li>
+
+                                        <li className="nav__item">
+                                            <a href="/accessories" className={`nav__link ${location.pathname === '/accessories' ? 'active-link' : ''}`}>АКСЕССУАРЫ</a>
+                                        </li>
+                                        <li className="nav__item">
+                                            <a href="/contact" className={`nav__link ${location.pathname === '/contact' ? 'active-link' : ''}`}>КОНТАКТ</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        <ul className={`sub-menu__category ${showSubMenuMobile && window.innerWidth <= 992 ? "show-sub-menu" : ""}`}>
+                            <div className='back__container grid'> <i className="uil uil uil-angle-left left-arrow-icon" onClick={() => setShowSubMenuMobile(!showSubMenuMobile)}></i>
                                 {window.innerWidth <= 992 && ( // Check for mobile devices
                                     <a href="/clothes" className={`nav__link current-parent ${location.pathname === '/clothes' ? 'active-link' : ''}`}>
-                                        Одежда
+                                        ОДЕЖДА
                                     </a>
-                                )}</div>
-                            <hr className="header-divider" />
+                                )}
+                            </div>
 
-                            {subMenuItems.map((item) => (
-                                <li className='sub-menu__item' key={item.cateName}>
-                                    <Link to={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
-                                        {item.display}
-                                    </Link>
-                                </li>
-                            ))}
+                            <div className='sub-menu-fashionable-mobile'>
+                                <p className='sub-menu-property-mobile'>МОДНЫЙ</p>
+                                {subMenuItems.slice(0, 4).map((item) => (
+                                    <li className='sub-menu__item' key={item.cateName}>
+                                        <a href={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
+                                            {item.display}
+                                        </a>
+                                    </li>
+                                ))}
+                            </div>
+
+                            <div className='sub-menu-casual-mobile'>
+                                <p className='sub-menu-property-mobile'>ПОВСЕДНЕВНЫЙ</p>
+                                {subMenuItems.slice(4, 8).map((item) => (
+                                    <li className='sub-menu__item' key={item.cateName}>
+                                        <a href={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
+                                            {item.display}
+                                        </a>
+                                    </li>
+                                ))}
+                            </div>
+
+                            <div className='sub-menu-comfortable-mobile'>
+                                <p className='sub-menu-property-mobile'>КОМФОРТНЫЙ</p>
+                                {subMenuItems.slice(8, 12).map((item) => (
+                                    <li className='sub-menu__item' key={item.cateName}>
+                                        <a href={item.url} className={`nav__link sub-menu__link  ${location.pathname === item.url ? 'active-link sub-menu__link' : 'sub-menu__link'}`}>
+                                            {item.display}
+                                        </a>
+                                    </li>
+                                ))}
+                            </div>
                         </ul>
-                    )}
+
+                    </div>
                 </div>
+
 
                 <div className="icon__container">
                     <Search isOpen={isOpen} toggleSearch={toggleSearch} /> {/* Pass the custom toggleSearch function */}
                     {!isOpen && (
-                        <Link to='/cart' className="uil uil-shopping-cart-alt cart__icon">
+                        <a href='/cart' className="uil uil-shopping-cart-alt cart__icon">
                             <span className='num-orders'>{Order.numOrders}</span>
-                        </Link>
+                        </a>
                     )}
-                    <div className="nav__toggle" onClick={() => showMenu(!navToggle)}>
-                        {!navToggle ? <i className='uil uil-bars'></i> : <i className="uil uil-times nav__close" onClick={() => {
-                            setShowSubMenu(false); // Close the desktop submenu
-                            setShowSubMenuMobile(false); // Close the mobile submenu
-                        }}></i>}
-                    </div>
                 </div>
             </nav>
         </header>

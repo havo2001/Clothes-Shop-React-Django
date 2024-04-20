@@ -9,6 +9,10 @@
     font-weight: var(--font-normal);
 }
 
+.crumb-link:hover {
+    color: var(--theme-color) !important;
+}
+
 .breadcrumbs>* {
     display: inline-block;
     margin-right: 10px;
