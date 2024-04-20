@@ -99,7 +99,7 @@
     font-size: var(--small-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
-    transition: .3s;
+    transition: .5s;
 }
 
 .nav__close,
@@ -271,7 +271,7 @@
         /* padding: 2rem 1.5rem 4rem; */
         padding-top: 4rem;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-        transition: .3s;
+        transition: .5s;
         z-index: 1000;
     }
 
@@ -300,7 +300,7 @@
         
         position: fixed;
         left: -100%;
-        transition: .3s;
+        transition: .5s;
         z-index: 501;
     }
 
