@@ -3,7 +3,7 @@ import './productElement.css';
 import { Link } from "react-router-dom";
 import { categories } from '../../data/Categories';
 
-const ProductElement = ({ id, productName, cateName, price, image, image_hover, colors }) => {
+const ProductElement = ({ id, productName, cateName, price, image, image_hover, colors, tag }) => {
     const [isHovered, setIsHovered] = useState(false);
     const findUrlsByCateName = (categories, cateName) => {
         const matchedCategories = categories.filter(category => category.cateName === cateName);
@@ -21,16 +21,21 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
     return (
         <div className="product__container">
             <Link to={`${url}/${id}`} onClick={scrollToTop}>
-                <img
-                    className="product__img"
-                    src={isHovered ? image_hover : image}
-                    alt="product_image"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                />
-                <p className='product__name'>{productName}</p>
+                <div className='element-image__container'>
+                    <div className='product-tag'>{tag}</div>
+                    <img
+                        className="product__img"
+                        src={isHovered ? image_hover : image}
+                        alt="product_image"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    />
+                </div>
             </Link>
-            <p className='product__price'>{price}</p>
+            <div className='element-product__container'>
+                <Link to={`${url}/${id}`} onClick={scrollToTop} className='element-product__name'>{productName}</Link>
+            </div>
+            <p className='element-product__price'>{price}</p>
             <div className="element-color-dots-container">
                 {colors.map(colorObj => (
                     <Link
@@ -39,9 +44,11 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                         className="color-link"
                         onClick={scrollToTop}
                     >
-                        <svg className="element-color-dot" viewBox="0 0 14 14" width="14" height="14">
-                            <circle cx="7" cy="7" r="6" fill={colorObj.color} />
-                        </svg>
+                        <div className='element-color__container'>
+                            <span style={{ backgroundColor: colorObj.color }} title={colorObj.colorName}>
+                                {colorObj.colorName}
+                            </span>
+                        </div>
                     </Link>
                 ))}
             </div>

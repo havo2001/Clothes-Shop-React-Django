@@ -177,7 +177,8 @@ const Header = () => {
                 <div className="icon__container">
                     <Search isOpen={isOpen} toggleSearch={toggleSearch} /> {/* Pass the custom toggleSearch function */}
                     {!isOpen && (
-                        <a href='/cart' className="uil uil-shopping-cart-alt cart__icon">
+                        <a href='/cart' className="cart__icon">
+                            <div className='uil uil-shopping-cart-alt cart-icon-icon'></div>
                             <span className='num-orders'>{Order.numOrders}</span>
                         </a>
                     )}

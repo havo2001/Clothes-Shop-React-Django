@@ -54,12 +54,23 @@
 }
 
 .nav__phone-icon,
-.cart__icon,
 .search__icon {
     color: var(--text-color);
     font-weight: var(--font-medium);
     font-size: 1.25rem;
     transition: transform 0.5s ease;
+}
+
+.nav__phone-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+    color: var(--title-color);
 }
 
 .cart__icon:hover,
@@ -70,6 +81,23 @@
 .cart__icon {
     position: relative;
     display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.cart-icon-icon {
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    transition: transform 0.5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.25rem;
+    cursor: pointer;
 }
 
 .num-orders {
@@ -120,6 +148,7 @@
 }
 
 .sub-menu-desktop__category-container {
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -135,6 +164,7 @@
 }
 
 .sub-menu-desktop__category {
+    z-index: 101;
     position: absolute;
     top: calc(var(--header-height) + 11rem);
     left: 50%;
@@ -170,13 +200,13 @@
 
 /* ------------------------------- BREAKPOINTS ------------------------------ */
 /* For large devices */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1536px) {
     .nav__menu-container {
         gap: 2rem;
     }
 
     .nav__list {
-        column-gap: 1.5rem;
+        column-gap: 2rem;
     }
     
 

@@ -24,6 +24,7 @@ const ShowProducts = ({ catName }) => {
               image={product.image}
               image_hover={product.image_hover}
               colors={colors[index].map(colorObj => colorObj)}
+              tag={product.tag}
             />
           ))}
         </div>

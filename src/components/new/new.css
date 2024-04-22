@@ -1,3 +1,25 @@
+.product-card-slider__container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.slick-prev:before {
+    color: var(--gray-color) !important;
+    font-size: 2rem !important;
+    margin-left: -0.5rem;
+}
+
+.slick-next:before {
+    color: var(--gray-color) !important;
+    font-size: 2rem !important;
+}
+
+.slick-slide>div {
+    padding: 0 0.5rem;
+}
+
+
 .new__container {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -9,10 +31,10 @@
 
 .cat__list {
     display: flex;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     justify-content: center;
     margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 .cat__link {
@@ -24,9 +46,27 @@
     font-weight: var(--font-normal);
 }
 
+.cat-item__container {
+    border: 2px solid var(--gray-color);
+    border-radius: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.active-cat {
+    border: 2px solid var(--theme-color);
+    background-color: var(--theme-color);
+}
+
+.active-cat .cat__item {
+    color: var(--container-color)
+}
+
 .cat__item {
     background-color: transparent;
-    color: var(--text-color);
+    color: var(--gray-color);
 }
 
 
@@ -39,7 +79,7 @@
 
     .cat__list {
         margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -51,7 +91,34 @@
         margin-bottom: 1.5rem;
     }
 
+    .cat-item__container {
+        border-radius: 14px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .product-card-slider__container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .cat__list {
-        column-gap: 1rem;
+        column-gap: 0.5rem;
+    }
+
+    .slick-slide>div {
+        padding: 0 0.25rem;
+    }
+
+    .slick-prev:before {
+        color: var(--gray-color) !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .slick-next:before {
+        color: var(--gray-color) !important;
+        font-size: 1.5rem !important;
     }
 }
