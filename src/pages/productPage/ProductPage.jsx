@@ -258,11 +258,11 @@ const ProductPage = () => {
                             {quantity < testProduct.quantity ?
                                 <div className='add-to-cart' onClick={addToCart} style={{ cursor: 'pointer' }}>
                                     {/* <i className='uil uil-shopping-cart-alt page-cart__icon'></i> */}
-                                    <p className='cart__text'>В КОРЗИНУ</p>
+                                    <p className='cart__text'>В Корзину</p>
                                 </div> :
                                 <div className='add-to-cart' style={{ cursor: 'default' }}>
                                     {/* <i className='uil uil-shopping-cart-alt page-cart__icon'></i> */}
-                                    <p className='cart__text'>В КОРЗИНУ</p>
+                                    <p className='cart__text'>В Корзину</p>
                                 </div>}
                         </div> :
                             <div className='out-of-stock-btn add-to-cart' style={{ cursor: "default" }}>Сейчас нет в наличии</div>
