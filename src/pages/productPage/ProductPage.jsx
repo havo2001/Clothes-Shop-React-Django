@@ -8,6 +8,8 @@ import { breadCrumbsDisplay } from '../../data/Categories';
 import SizeSelector from '../../components/sizeSelector/SizeSelector';
 import Order from '../../data/Order';
 import ShowProducts from '../../components/showProducts/ShowProducts';
+import SliderBar from '../../components/sliderBar/SliderBar';
+
 
 
 const testProduct = {
@@ -279,8 +281,10 @@ const ProductPage = () => {
                 {/* Related Products */}
                 <div className='related-products container'>
                     <h2 className='recommend__title'>РЕКОМЕНДУЕМ ТАКЖЕ</h2>
-                    <ShowProducts catName={testProduct.cateName}></ShowProducts>
+                    {/* <ShowProducts catName={testProduct.cateName}></ShowProducts> */}
+                    <SliderBar cateName="All"/>
                 </div>
+                
 
                 <Footer />
             </section>
