@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className="footer__container container grid">
-        <a href="/index.html" className='logo'>Mollywlove</a>
+        <div className='footer__logo grid'>
+          <a href="/index.html" className='name'>Mollywlove</a>
+        </div>
         <div className="footer__social">
           <p className='social-title section__subtitle'>Подписывайтесь</p>
           <div className='social-icons'>

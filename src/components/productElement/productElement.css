@@ -52,6 +52,35 @@
     padding-right: 0.5rem;
 }
 
+.element-add-to-cart {
+    position: absolute;
+    width: 90%;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    z-index: 50;
+    bottom: -2rem; 
+    left: 50%; 
+    transform: translate(-50%, 50%); 
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    background-color: var(--container-color);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    transition: bottom 0.5s ease;
+    border: 1.5px solid var(--text-color);
+}
+
+.element-image__container:hover .element-add-to-cart {
+    bottom: 2rem;
+}
+
+.element-add-to-cart:hover {
+    background-color: var(--theme-color);
+    border: 1.5px solid var(--theme-color);
+    color: var(--container-color);
+}
+
 .product__img {
     z-index: 2;
     position: absolute;
@@ -69,22 +98,23 @@
 }
 
 .element-color__container span {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     font-size: 0;
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
     position: relative;
-    border: 2px solid #fff;
-    box-shadow: 0 0 1px 1px #ddd;
+    border: 1.5px solid #fff;
+    box-shadow: 0 0 0 1px var(--gray-color);
     transition: all 0.2s ease-in-out;
 }
 
 .element-color__container span:hover {
-    box-shadow: none;
-    border: 2px solid #222222;
+    /* box-shadow: none;
+    border: 2px solid #222222; */
+    box-shadow: 0 0 0 1px var(--text-color);
 }
 
 .element-color__container span::after {
@@ -109,7 +139,7 @@
 
 /* Adjusted the selector */
 .element-color__container span:hover::before {
-    content: attr(title) !important;
+    content: attr(colorName) !important;
     position: absolute;
     padding: 0 10px;
     background: var(--theme-color);
@@ -129,4 +159,21 @@
 
 
 /* For medium devices */
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {    
+    .element-image__container:hover .element-add-to-cart {
+        bottom: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 460px) {
+    .element-add-to-cart {
+        transition: bottom 0.5s ease;
+        border: 1px solid var(--text-color);
+    }
+    
+    .element-image__container:hover .element-add-to-cart {
+        bottom: 1.5rem;
+    }
+    
+}

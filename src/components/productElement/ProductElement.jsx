@@ -3,6 +3,7 @@ import './productElement.css';
 import { Link } from "react-router-dom";
 import { categories } from '../../data/Categories';
 
+
 const ProductElement = ({ id, productName, cateName, price, image, image_hover, colors, tag }) => {
     const [isHovered, setIsHovered] = useState(false);
     const findUrlsByCateName = (categories, cateName) => {
@@ -16,13 +17,19 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
     const scrollToTop = () => {
         window.scrollTo(0, 0)
     }
+    const h = () => { }
+    // arrow function, different from a function called using function
 
+    const addToCart = () => {
+        // do something
+    }
 
     return (
         <div className="product__container">
-            <Link to={`${url}/${id}`} onClick={scrollToTop}>
-                <div className='element-image__container'>
-                    <div className='product-tag'>{tag}</div>
+
+            <div className='element-image__container'>
+                <div className='product-tag'>{tag}</div>
+                <Link to={`${url}/${id}`} onClick={scrollToTop}>
                     <img
                         className="product__img"
                         src={isHovered ? image_hover : image}
@@ -30,8 +37,10 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     />
-                </div>
-            </Link>
+                </Link>
+                <button className='element-add-to-cart' onClick={(event) => { event.stopPropagation(); addToCart(); }}>В Корзину</button>
+            </div>
+
             <div className='element-product__container'>
                 <Link to={`${url}/${id}`} onClick={scrollToTop} className='element-product__name'>{productName}</Link>
             </div>
@@ -45,7 +54,7 @@ const ProductElement = ({ id, productName, cateName, price, image, image_hover, 
                         onClick={scrollToTop}
                     >
                         <div className='element-color__container'>
-                            <span style={{ backgroundColor: colorObj.color }} title={colorObj.colorName}>
+                            <span style={{ backgroundColor: colorObj.color }} colorName={colorObj.colorName}>
                                 {colorObj.colorName}
                             </span>
                         </div>

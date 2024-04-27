@@ -58,6 +58,18 @@
 
 
 /* Responsive typography */
+@media screen and (max-width: 1280px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.9rem;
+    --small-font-size: 0.8rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   :root {
     --big-font-size: 2.5rem;
@@ -79,13 +91,13 @@
     --normal-font-size: 0.75rem;
     --small-font-size: 0.7rem;
     --smaller-font-size: 0.5rem; */
-    --big-font-size: 2.5rem;
-    --h1-font-size: 1.75rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.9rem;
-    --small-font-size: 0.8rem;
-    --smaller-font-size: 0.75rem;
+    --big-font-size: 2.25rem;
+    --h1-font-size: 1.875rem;
+    --h2-font-size: 1.125rem;
+    --h3-font-size: 0.9rem;
+    --normal-font-size: 0.8rem;
+    --small-font-size: 0.75rem;
+    --smaller-font-size: 0.7rem;
   }
 }
 
@@ -187,7 +199,7 @@ img {
   background-color: var(--container-color);
   color: var(--container-color);
   padding: 1.25rem 2rem;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   font-weight: var(--normal-font-size);
 }
 
@@ -215,7 +227,7 @@ img {
   display: flex;
   width: 40rem;
   border: 2px solid var(--shadow-color);
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .form__box input[type='text'] {
@@ -223,7 +235,7 @@ img {
   padding: 0.5rem;
   font-size: var(--small-font-size);
   border: none;
-  border-radius: 5px 0 0 5px;
+  /* border-radius: 5px 0 0 5px; */
   outline: none;
 }
 
@@ -234,7 +246,7 @@ img {
   background-color: var(--theme-color);
   border: none;
   cursor: pointer;
-  border-radius: 0 5px 5px 0;
+  /* border-radius: 0 5px 5px 0; */
 }
 
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './showProducts.css';
 import ProductElement from '../productElement/ProductElement';
-import { products, colors } from '../../data/TestUI';
+// import { products, colors } from '../../data/TestUI';
 
-const ShowProducts = ({ catName }) => {
+const ShowProducts = ({ products, colors }) => {
   const [isActiveLoad, setIsActiveLoad] = useState(false);
 
   const handleClickLoad = () => {

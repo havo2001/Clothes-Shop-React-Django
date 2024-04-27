@@ -202,7 +202,7 @@
 /* For large devices */
 @media screen and (max-width: 1536px) {
     .nav__menu-container {
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .nav__list {
@@ -211,6 +211,33 @@
     
 
 }
+
+
+@media screen and (max-width: 1536px) {
+    .nav__menu-container {
+        gap: 2.5rem;
+    }
+
+    .nav__list {
+        column-gap: 1.75rem;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 1280px) {
+    .nav__menu-container {
+        gap: 2rem;
+    }
+
+    .nav__list {
+        column-gap: 1.5rem;
+    }
+    
+
+}
+
 
 @media screen and (max-width: 1024px) {
     .nav__list {
@@ -455,4 +482,10 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: 460px) { 
+    .icon__container {
+        gap: 0.5rem;
+    }
 }

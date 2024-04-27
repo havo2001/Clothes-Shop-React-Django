@@ -1,4 +1,4 @@
-.footer { 
+.footer {
     margin-top: auto;
     /* bottom: 0;  */
     width: 100%;
@@ -15,8 +15,6 @@
 .social-icons {
     display: flex;
     gap: 2rem;
-    align-items: center;
-    justify-content: center;
 }
 
 .social-icon {
@@ -35,12 +33,22 @@
 
 .contact-title {
     text-align: left;
+    font-weight: var(--font-semi-bold);
+}
+
+.social-title {
+    font-weight: var(--font-semi-bold);
 }
 
 .info {
     display: flex;
     flex-direction: column;
     text-align: left;
+}
+
+.footer__logo .name {
+    font-size: var(--h1-font-size);
+    color: var(--theme-color);
 }
 
 .info p {
@@ -52,7 +60,10 @@
 /* For small devices */
 @media screen and (max-width: 460px) {
     .footer__container {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: left;
     }
 
     .contact-title {
@@ -66,8 +77,11 @@
 
     .social-icons {
         gap: 1.25rem;
-    } 
+    }
+
+    .footer__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-
-

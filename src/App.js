@@ -5,7 +5,7 @@ import Contact from './pages/contact/Contact';
 import Delivery from './pages/delivery/Delivery';
 import ProductPage from './pages/productPage/ProductPage';
 import DetailedCategory from './pages/detailedCategory/DetailedCategory';
-
+import Page404 from './pages/page404/Page404';
 
 import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom"
 
@@ -24,6 +24,7 @@ function App() {
           <Route path="/:category/:productId" element={<ProductPage />} />
           <Route path="/clothes/:category" element={<DetailedCategory />} />
           <Route path="/:category" element={<DetailedCategory />} />
+          <Route path="/404" element={<Page404 />} />
         </Routes>
       </HashRouter>
     </div>
