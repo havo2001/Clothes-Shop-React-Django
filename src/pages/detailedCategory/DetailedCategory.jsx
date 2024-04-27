@@ -14,9 +14,26 @@ const DetailedCategory = () => {
             <section className='detailed-category'>
                 <Header />
                 <BreadCrumbs />
-                <div className='detailed-category__container container'>
-                    <ShowProducts products={products} colors={colors}/>
-                </div>
+                {
+                    Object.keys(products).length > 0 ?
+                        <div className='detailed-category__container container'>
+                            <ShowProducts products={products} colors={colors} />
+                        </div> :
+                        <div className='category-coming-soon container'>
+                            <h1>Извините, товары временно недоступны</h1>
+        
+                            <p>Мы работаем над добавлением новых товаров в наш ассортимент. Пожалуйста, зайдите позже, чтобы увидеть обновленный выбор товаров.</p>
+                            <div className="back_btn__container">
+                                <button className="back_btn">
+                                    <i className='home-icon uil uil-estate'></i>
+                                    <a href='/'>Вернуться домой</a>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                }
                 <Footer />
             </section> :
             <Page404 />}
